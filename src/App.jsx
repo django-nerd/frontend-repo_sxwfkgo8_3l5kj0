@@ -4,6 +4,8 @@ import About from './components/About'
 import Projects from './components/Projects'
 import Gallery from './components/Gallery'
 import SkillsContact from './components/SkillsContact'
+import MusicToggle from './components/MusicToggle'
+import SEO from './components/SEO'
 
 function useScrollParallax() {
   const ref = useRef(null)
@@ -31,6 +33,7 @@ function App() {
 
   return (
     <div className="min-h-screen text-gray-900 font-inter selection:bg-pink-200/60 selection:text-purple-900">
+      <SEO />
       {/* dreamy pastel background */}
       <div ref={bgRef} className="fixed inset-0 -z-0 pointer-events-none" aria-hidden />
 
@@ -44,6 +47,9 @@ function App() {
             <a href="#gallery" className="hover:text-purple-600">AI Gallery</a>
             <a href="#contact" className="hover:text-purple-600">Contact</a>
           </nav>
+          <div className="ml-4">
+            <MusicToggle />
+          </div>
         </div>
       </header>
 
